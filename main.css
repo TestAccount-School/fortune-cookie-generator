@@ -8,6 +8,7 @@ html {
 
 .fortune-cookie-saying-wrapper {
     border: 1px solid #666;
+    border-radius: 5px;
     padding: 1em;
     margin: 1em;
 }

@@ -10,18 +10,27 @@
         <link rel="stylesheet" href="main.css">
     </head>
     <body>
+
         <h1>Fortune Cookie Generator</h1>
         <p>Use this page to generate fortune cookie sayings.</p>
+
         <div class="fortune-cookie-saying-wrapper">
-            <p id="fortune-cookie-text">Click the button to generate a saying.</p>
+            <p id="fortune-cookie-text">
+              Click the button to generate a saying.
+            </p>
         </div>
-        <button class="generate-button">
+
+        <button class="generate-button btn btn-primary">
             Make My Fortune!
         </button>
+
         <hr>
-        <h2>Previous Fortunes</h2>
-        <ul id="previous-fortunes-container">
-        </ul>
+
+        <div>
+          <h2>Previous Fortunes</h2>
+          <ul id="previous-fortunes-container"></ul>
+        </div>
+        <!-- CDN Content Librabries -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
