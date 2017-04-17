@@ -7,7 +7,6 @@
 (function() {
 'use strict';
 
-  // list of fortunes
   var fortunesList = [
       "People are naturally attracted to you.",
       "You learn from your mistakes... You will learn a lot today.",
@@ -64,41 +63,30 @@
 
   document.addEventListener('DOMContentLoaded', function() {
 
-    // select currentFortune
     var currentFortune = document.querySelector('#fortune-cookie-text');
-    // select fortune button
     var fortuneButton = document.querySelector('.generate-button');
-    // select prevFortuneList container
     var prevFortunesList = document.getElementById('previous-fortunes-container');
-    // generate random fortune
+
     function getRandomFortune() {
       let newFortune = fortunesList[Math.floor(Math.random() * (fortunesList.length - 0)) + 0];
       return newFortune;
     }
 
-    // create new fortune
     function newFortune() {
       currentFortune.innerHTML = getRandomFortune();
     }
 
-    // create previous fortune list
     function prevFortunes() {
-      // select all <li> in prevFortunes
       let listItems = document.querySelectorAll('#previous-fortunes-container li');
-      // create prevFortuneList element
       let prevFortune = document.createElement('li');
-      // set text content for prevFortuneList
       prevFortune.innerHTML = currentFortune.innerHTML;
-      // add item to container
       prevFortunesList.appendChild(prevFortune);
-      // remove fortune from previous fortune list
-      // when list gets too large
+
       if (listItems.length > 5) {
         prevFortunesList.removeChild(prevFortunesList.firstElementChild);
       }
     }
 
-    // listen for click event and set new fortune
     fortuneButton.addEventListener('click', function() {
       newFortune();
       prevFortunes();
